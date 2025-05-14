@@ -545,11 +545,20 @@ void L() {
   digitalWrite(penna, LOW);
   movimentoSinistra(1000);
   movimentoBasso(2000);
+  
+  delay(2000);
+  digitalWrite(penna, LOW);
 }
 
 void M() {
   Serial.println("Hai chiamato la funzione M()");
   digitalWrite(penna, HIGH);
+  
+  movimentoAlto(2000);
+  movimentoDiagonaleBassa(1000); //DATECI OCCHIO VEDI SCRITTURA GIUSTA?!
+  movimentoDiagonaleAlto(1000); //DATECI OCCHIO VEDI SCRITTURA GIUSTA?!
+  movimentoBasso(2000);
+  
   delay(2000);
   digitalWrite(penna, LOW);
 }
@@ -557,6 +566,11 @@ void M() {
 void N() {
   Serial.println("Hai chiamato la funzione N()");
   digitalWrite(penna, HIGH);
+  
+  movimentoAlto(2000);
+  movimentoDiagonaleBasso(2000);
+  movimentoAlto(2000);
+  
   delay(2000);
   digitalWrite(penna, LOW);
 }
@@ -577,6 +591,12 @@ void O() {
 void P() {
   Serial.println("Hai chiamato la funzione P()");
   digitalWrite(penna, HIGH);
+
+  movimentoAlto(2000);
+  movimentoDestra(1000);
+  movimentoBasso(1000);
+  movimentoSinistra(1000);
+  
   delay(2000);
   digitalWrite(penna, LOW);
 }
@@ -591,6 +611,13 @@ void Q() {
 void R() {
   Serial.println("Hai chiamato la funzione R()");
   digitalWrite(penna, HIGH);
+
+  movimentoAlto(2000);
+  movimentoDestra(1000);
+  movimentoBasso(1000);
+  movimentoSinistra(1000);
+  movimentoDiagonaleBasso(1000);
+  
   delay(2000);
   digitalWrite(penna, LOW);
 }
@@ -598,6 +625,10 @@ void R() {
 void S() {
   Serial.println("Hai chiamato la funzione S()");
   movimentoSinistra(2000);
+//  movimentoBasso(1000);
+  // movimentoDestra(1000); //OCCHIOO
+  // movimentoBasso(1000);
+  // movimentoSinistra(2000);
   digitalWrite(penna, HIGH);
 
   movimentoDestra(1000);
@@ -689,7 +720,10 @@ void Y() {
   Serial.println("Hai chiamato la funzione Y()");
   digitalWrite(penna, HIGH);
 
-
+  movimentoDiagonaleBasso(1000);
+  movimentoBasso(1000);
+  movimentoAlto(1000);
+  movimentoDiagonaleAlto(1000);
 
   digitalWrite(penna, LOW);
   movimentoSinistra(1000);
@@ -698,6 +732,11 @@ void Y() {
 void Z() {
   Serial.println("Hai chiamato la funzione Z()");
   digitalWrite(penna, HIGH);
+
+  movimentoDestro(2000);
+  movimentoDiagonaleBassoSinistra(2000);
+  movimentoDestra(2000);
+  
   delay(2000);
   digitalWrite(penna, LOW);
 }
